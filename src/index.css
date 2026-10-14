@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold-primary: #d4af37;
+    --gold-bright: #ffd56b;
+    --gold-metallic: #e5b842;
+    --gold-dark: #997316;
+    --flame-red: #e52e2e;
+    --bg-dark: #07080a;
+    --card-dark: #0f1117;
+    --card-surface: #141720;
+    --border-dark: #222734;
+    --border-gold: rgba(212, 175, 55, 0.25);
+  }
+
+  body {
+    background-color: #07080a;
+    color: #f3f4f6;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #d4af37;
+    color: #000000;
+  }
+}
+
+/* Metallic Gold Text */
+.text-gold-metallic {
+  background: linear-gradient(135deg, #ffe28a 0%, #e5b842 40%, #b3861b 80%, #ffd978 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-flame-gradient {
+  background: linear-gradient(135deg, #ff6b6b 0%, #e52e2e 50%, #991b1b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Glass Header */
+.glass-header {
+  background: rgba(8, 9, 12, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Luxury Cards */
+.gold-border-card {
+  background: linear-gradient(180deg, #12141c 0%, #0a0b0e 100%);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-border-card:hover {
+  border-color: rgba(229, 184, 66, 0.6);
+  box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.9), 0 0 25px -2px rgba(212, 175, 55, 0.28);
+  transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, #ffd56b 0%, #e5b842 50%, #b3861b 100%);
+  color: #08090b;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #ffe599 0%, #f5c542 50%, #c59b27 100%);
+  box-shadow: 0 6px 25px rgba(229, 184, 66, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-flame {
+  background: linear-gradient(135deg, #ff4d4d 0%, #e52e2e 60%, #991b1b 100%);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(229, 46, 46, 0.4);
+  transition: all 0.25s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c202a;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
